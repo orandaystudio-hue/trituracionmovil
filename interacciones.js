@@ -44,7 +44,8 @@
     image.src = item.href;
     image.alt = item.querySelector('img').alt;
     document.getElementById('visor-titulo').textContent = item.closest('article').querySelector('h3').textContent;
-    document.getElementById('visor-contador').textContent = `${current + 1} / ${gallery.length} · Imagen ilustrativa`;
+    const kind = item.closest('.gallery-item') ? 'Fotografía documental' : 'Imagen ilustrativa';
+    document.getElementById('visor-contador').textContent = `${current + 1} / ${gallery.length} · ${kind}`;
   };
   if (typeof dialog.showModal === 'function') {
     gallery.forEach((item, index) => item.addEventListener('click', e => {

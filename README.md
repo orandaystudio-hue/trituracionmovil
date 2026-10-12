@@ -58,12 +58,17 @@ no almacena los datos del formulario en el sitio ni en una base de datos.
   permanece fuera de la entrega.
 - Seis materiales: documentos, inventario, medios digitales, uniformes,
   publicidad e imagen de empresa, material clínico y artículos de salud.
+- Bloque independiente «Servicio de trituración en las instalaciones de tu
+  empresa», con el párrafo y los tres puntos de la referencia 3. Incluye
+  una comparación de antes y después identificada como ilustrativa.
 - Beneficios con supervisión, evidencia, unidades especializadas,
   constancia, ausencia de mínimo y atención personalizada.
 - Paso 4: bitácora de conformidad, kilos triturados, área limpia y seguimiento.
 - Se retira la sección de cobertura y sus enlaces.
-- Preguntas frecuentes con el texto solicitado. Se retiran las preguntas
-  de supervisión y duración marcadas con X en la referencia.
+- Siete preguntas frecuentes con el texto solicitado, incluidas las
+  preguntas sobre supervisión y duración del servicio.
+- Galería independiente con tres fotografías documentales proporcionadas
+  en la referencia 9 y un visor para ampliarlas.
 - Contacto con captura de datos y botón de envío. Se retiran los distintivos
   del bloque de contacto y el teléfono anterior.
 - Único teléfono confirmado: **81 2389 5162**.
@@ -77,10 +82,13 @@ o manejo autorizado de residuos regulados sin respaldo.
 
 ## Imágenes
 
-Las fotografías son ilustrativas de materiales; no representan las
-instalaciones ni el personal de Trituración Móvil. Las tres imágenes
-previamente aprobadas se conservan. Las otras tres tienen licencia de
-Pexels para uso en sitios web. Autores y enlaces en `FUENTES-IMAGENES.md`.
+Las seis fotografías de materiales son ilustrativas. Las tres previamente
+aprobadas se conservan; las otras tres tienen licencia de Pexels para uso
+en sitios web. La galería contiene tres fotografías documentales extraídas
+del material proporcionado por el cliente, sin atribuirlas a una empresa
+o servicio concreto. La comparación de antes y después se generó con
+ImageGen y se identifica como representación ilustrativa. Autores, fuentes
+y detalles en `FUENTES-IMAGENES.md`.
 La licencia de Manrope está incluida en `fonts/Manrope-OFL.txt`.
 
 Retira del hosting las imágenes y ZIP antiguos que ya no se utilicen,
@@ -92,8 +100,13 @@ la versión más reciente de GitHub.
 ## Validación
 
 Revisión visual y pruebas en 1440, 1024, 768, 390 y 320 px: imágenes, fuente
-local, enlaces, menú, teclado, visor de seis fotos, preguntas frecuentes,
+local, enlaces, menú, teclado, visor de nueve imágenes, preguntas frecuentes,
 contactos y ausencia de desbordamiento horizontal.
+
+Se cotejaron las nueve referencias del cliente: bloque de servicio en sitio,
+comparación ilustrativa, seis materiales, seis beneficios, cierre del
+servicio, siete preguntas y galería independiente. La matriz está en
+`CAMBIOS-CLIENTE.md`.
 
 PHP comprobado con un servidor SMTP simulado local: destinatario, contenido,
 Reply-To, envío exitoso, fallo de transporte, conservación de datos,
