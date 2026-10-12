@@ -73,17 +73,26 @@
   const pagesPreview = location.hostname.endsWith('.github.io');
   if (pagesPreview) {
     button.querySelector('span').textContent = 'Preparar solicitud por correo';
-    document.getElementById('form-ayuda').textContent = 'Prepara tu solicitud y elige tu aplicación de correo o Gmail para revisarla y enviarla.';
+    document.getElementById('form-ayuda').textContent = 'Puedes preparar un correo o abrir WhatsApp con tu cotización lista para revisar y enviar.';
   }
   let submitting = false;
+  const quoteLabels = {nombre:'Nombre',empresa:'Empresa',telefono:'Teléfono',correo:'Correo',material:'Material',cantidad:'Cantidad aproximada',ubicacion:'Ubicación',mensaje:'Detalles'};
+  const prepareQuote = () => {
+    const data = new FormData(form);
+    return 'Hola, quisiera solicitar una cotización.\n\n' + Object.entries(quoteLabels).map(([key,label]) => label + ': ' + (String(data.get(key) || '').trim() || 'No indicado')).join('\n');
+  };
+  document.getElementById('cotizacion-whatsapp').addEventListener('click', e => {
+    if (submitting || !form.reportValidity() || form.elements.sitio.value) { e.preventDefault(); return; }
+    e.currentTarget.href = 'https://wa.me/528123895162?text=' + encodeURIComponent(prepareQuote());
+    status.className = 'form-status';
+    status.textContent = 'WhatsApp se abrirá con tu solicitud preparada. Revisa el mensaje y pulsa Enviar.';
+  });
   form.addEventListener('submit', async e => {
     if (!window.fetch || !window.FormData) return;
     e.preventDefault();
     if (submitting || !form.reportValidity()) return;
     if (pagesPreview) {
-      const data = new FormData(form);
-      const labels = {nombre:'Nombre',empresa:'Empresa',telefono:'Teléfono',correo:'Correo',material:'Material',cantidad:'Cantidad aproximada',ubicacion:'Ubicación',mensaje:'Detalles'};
-      const draft = 'Hola, quisiera solicitar una cotización.\n\n' + Object.entries(labels).map(([key,label]) => label + ': ' + (data.get(key) || 'No indicado')).join('\n');
+      const draft = prepareQuote();
       const subject = 'Cotización de servicio de trituración';
       document.getElementById('borrador-app').href = 'mailto:trituracionmovil.mty@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(draft);
       const gmail = new URL('https://mail.google.com/mail/');
@@ -123,7 +132,7 @@
       status.focus();
     } finally {
       clearTimeout(timeout); submitting = false; button.disabled = false;
-      button.querySelector('span').textContent = 'Enviar solicitud';
+      button.querySelector('span').textContent = 'Enviar por correo';
     }
   });
 })();

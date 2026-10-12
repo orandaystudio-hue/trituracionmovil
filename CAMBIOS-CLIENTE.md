@@ -11,7 +11,7 @@ tipografía, colores y nueva imagen de marca conservados.
 | 4 | Seis beneficios: destrucción en sitio, supervisión y evidencia, unidades especializadas, constancia con evidencia fotográfica, ausencia de mínimo y atención personalizada. |
 | 5 | Paso 4 «Cierre y seguimiento del servicio»: bitácora de conformidad con kilos triturados, área limpia y seguimiento de satisfacción. |
 | 6 | Sección de cobertura y enlaces retirados. |
-| 7 | Siete preguntas: costo, lugar, supervisión, documentación, duración, residuos y factura; redacción actualizada según la referencia. |
+| 7 | Seis preguntas: costo, lugar, supervisión, documentación, duración y residuos; redacción actualizada según la referencia. |
 | 8 | Captación mediante formulario, botón de envío y textos de contacto solicitados; sin distintivos ni teléfono adicional. |
 | 9 | Galería independiente de tres fotografías documentales proporcionadas, con ampliación, navegación y cierre con teclado. |
 
@@ -23,3 +23,8 @@ En HostGator el formulario utiliza `enviar-cotizacion.php`. GitHub Pages
 prepara un borrador para revisar y enviar por correo o Gmail. Las pruebas
 locales de envío utilizaron un servidor de correo simulado; la entrega en
 Gmail debe comprobarse después de instalar el paquete en HostGator.
+
+Nueva revisión: frase inferior de portada retirada; pregunta comercial final retirada; WhatsApp directo en contacto y pie, botón flotante y cotización con los ocho campos al número confirmado.
+
+Nota de voz: en el párrafo de portada se cambia «confidencial y controlada»
+por «confidencial, controlada» y se añade «todo» antes de «directamente».

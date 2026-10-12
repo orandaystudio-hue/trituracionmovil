@@ -65,15 +65,15 @@ no almacena los datos del formulario en el sitio ni en una base de datos.
   constancia, ausencia de mínimo y atención personalizada.
 - Paso 4: bitácora de conformidad, kilos triturados, área limpia y seguimiento.
 - Se retira la sección de cobertura y sus enlaces.
-- Siete preguntas frecuentes con el texto solicitado, incluidas las
+- Seis preguntas frecuentes con el texto solicitado, incluidas las
   preguntas sobre supervisión y duración del servicio.
 - Galería independiente con tres fotografías documentales proporcionadas
   en la referencia 9 y un visor para ampliarlas.
 - Contacto con captura de datos y botón de envío. Se retiran los distintivos
   del bloque de contacto y el teléfono anterior.
 - Único teléfono confirmado: **81 2389 5162**.
-- Se conservan el correo y Facebook confirmados; no se activa WhatsApp
-  sin confirmación de ese canal.
+- Se conservan el correo y Facebook confirmados y se añade WhatsApp al
+  número 81 2389 5162, autorizado por el cliente.
 - Se mantienen fuera todas las fotos de la operación anteriormente retirada.
 
 Los nuevos detalles del servicio proceden de las anotaciones proporcionadas
@@ -105,9 +105,24 @@ contactos y ausencia de desbordamiento horizontal.
 
 Se cotejaron las nueve referencias del cliente: bloque de servicio en sitio,
 comparación ilustrativa, seis materiales, seis beneficios, cierre del
-servicio, siete preguntas y galería independiente. La matriz está en
+servicio, seis preguntas y galería independiente. La matriz está en
 `CAMBIOS-CLIENTE.md`.
 
 PHP comprobado con un servidor SMTP simulado local: destinatario, contenido,
 Reply-To, envío exitoso, fallo de transporte, conservación de datos,
 validación, límites de frecuencia y envío sin JavaScript. Sin correos reales.
+
+## Contacto por WhatsApp
+
+El botón flotante abre el chat con un mensaje de consulta general. El botón
+«Enviar cotización por WhatsApp» valida los campos obligatorios y prepara
+nombre, empresa, teléfono, correo, material, cantidad, ubicación y detalles.
+El visitante revisa el mensaje en WhatsApp y pulsa Enviar. Funciona tanto en
+GitHub Pages como en HostGator; no publica ni envía mensajes por sí solo.
+La alternativa por correo se conserva.
+
+Se retiraron la frase inferior de la portada y la última pregunta comercial
+según las nuevas anotaciones. Las seis preguntas restantes, el bloque en
+sitio, la comparación, materiales, beneficios y galería se conservan.
+
+Formato de enlace: https://faq.whatsapp.com/5913398998672934
