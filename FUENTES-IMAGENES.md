@@ -11,7 +11,8 @@ Licencia de uso de fotografías: https://www.pexels.com/license/
 | publicidad-1200.webp | alleksana | https://www.pexels.com/photo/a-stack-of-open-magazines-4271624/ |
 | material-salud-1200.webp | Polina Tankilevitch | https://www.pexels.com/photo/hands-of-a-person-holding-disposable-face-masks-7337875/ |
 
-El logotipo se conserva del material de marca proporcionado. La imagen
-social utiliza la misma fotografía de archivo documental y texto del sitio.
+El logotipo se conserva del material de marca proporcionado. La nueva
+imagen panorámica de marca se conserva del último diseño de GitHub y
+también se utiliza en la imagen social.
 Las fotografías no se presentan como instalaciones, empleados o clientes
 de Trituración Móvil. Se optimizaron tamaño y formato para la web.

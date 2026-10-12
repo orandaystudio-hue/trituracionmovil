@@ -14,6 +14,10 @@
   });
   window.addEventListener('resize', () => { if (innerWidth > 900) setMenu(false); });
   document.getElementById('anio').textContent = String(new Date().getFullYear());
+  const header = document.querySelector('.header');
+  const updateHeader = () => header.classList.toggle('solid', scrollY > 20 || !menu.hidden);
+  addEventListener('scroll', updateHeader, {passive:true});
+  updateHeader();
 
   const navLinks = [...document.querySelectorAll('.nav a')];
   if ('IntersectionObserver' in window) {
@@ -65,11 +69,31 @@
   const form = document.getElementById('cotizacion');
   const status = document.getElementById('form-estado');
   const button = form.querySelector('[type="submit"]');
+  const pagesPreview = location.hostname.endsWith('.github.io');
+  if (pagesPreview) {
+    button.querySelector('span').textContent = 'Preparar solicitud por correo';
+    document.getElementById('form-ayuda').textContent = 'Prepara tu solicitud y elige tu aplicación de correo o Gmail para revisarla y enviarla.';
+  }
   let submitting = false;
   form.addEventListener('submit', async e => {
     if (!window.fetch || !window.FormData) return;
     e.preventDefault();
     if (submitting || !form.reportValidity()) return;
+    if (pagesPreview) {
+      const data = new FormData(form);
+      const labels = {nombre:'Nombre',empresa:'Empresa',telefono:'Teléfono',correo:'Correo',material:'Material',cantidad:'Cantidad aproximada',ubicacion:'Ubicación',mensaje:'Detalles'};
+      const draft = 'Hola, quisiera solicitar una cotización.\n\n' + Object.entries(labels).map(([key,label]) => label + ': ' + (data.get(key) || 'No indicado')).join('\n');
+      const subject = 'Cotización de servicio de trituración';
+      document.getElementById('borrador-app').href = 'mailto:trituracionmovil.mty@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(draft);
+      const gmail = new URL('https://mail.google.com/mail/');
+      gmail.search = new URLSearchParams({view:'cm',fs:'1',to:'trituracionmovil.mty@gmail.com',su:subject,body:draft}).toString();
+      document.getElementById('borrador-gmail').href = gmail.href;
+      document.getElementById('correo-borrador').hidden = false;
+      status.className = 'form-status';
+      status.textContent = 'Solicitud preparada. Elige tu aplicación de correo o Gmail para revisarla y enviarla.';
+      document.getElementById('borrador-app').focus();
+      return;
+    }
     submitting = true; button.disabled = true;
     button.querySelector('span').textContent = 'Enviando solicitud…';
     status.className = 'form-status'; status.textContent = 'Estamos enviando tu solicitud.';

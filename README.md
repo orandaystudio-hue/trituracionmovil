@@ -15,8 +15,12 @@ Este proyecto es independiente de ALZA.
 5. Abre el dominio, recarga sin caché y prueba una solicitud real para
    comprobar la llegada a `trituracionmovil.mty@gmail.com`, incluido Spam.
 
-**El formulario necesita `enviar-cotizacion.php`: subir únicamente el index
-no permite el envío. GitHub Pages no ejecuta PHP; el destino es HostGator.**
+**El envío directo necesita `enviar-cotizacion.php`: subir únicamente el index
+no permite el envío. GitHub Pages no ejecuta PHP.**
+
+En GitHub Pages, el formulario prepara un borrador con los datos para revisar
+y enviar desde una aplicación de correo o Gmail. No muestra un mensaje de
+envío exitoso ni intenta ejecutar PHP. En HostGator se realiza el envío directo.
 
 ## Formulario y correo
 
@@ -48,7 +52,10 @@ no almacena los datos del formulario en el sitio ni en una base de datos.
 
 ## Cambios solicitados
 
-- Portada sin camión, con el nombre de la empresa y el nuevo mensaje.
+- Se conserva la portada oscura y panorámica del diseño más reciente de
+  GitHub, con su nueva imagen de marca del camión. Se actualizan el nombre
+  de la empresa y el mensaje. La antigua imagen del camión sobre césped
+  permanece fuera de la entrega.
 - Seis materiales: documentos, inventario, medios digitales, uniformes,
   publicidad e imagen de empresa, material clínico y artículos de salud.
 - Beneficios con supervisión, evidencia, unidades especializadas,
@@ -79,7 +86,8 @@ La licencia de Manrope está incluida en `fonts/Manrope-OFL.txt`.
 Retira del hosting las imágenes y ZIP antiguos que ya no se utilicen,
 después de guardar un respaldo privado. La extracción de un ZIP no borra
 los archivos anteriores. Esta entrega no incluye fotos de la operación
-retirada ni imágenes de camiones.
+retirada. La nueva imagen panorámica de la unidad móvil se conserva de
+la versión más reciente de GitHub.
 
 ## Validación
 
